@@ -1,0 +1,19 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+venv.bak/
+
+# Archivos de Python
+*.pyc
+__pycache__/
+
+# Archivos de Django
+db.sqlite3
+*.log
+
+# Archivos de configuración
+*.env
+
+# Node_modules
+frontend/node_modules/
