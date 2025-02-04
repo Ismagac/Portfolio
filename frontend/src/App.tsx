@@ -9,7 +9,7 @@ function App() {
         <div className="container">
           <div className="logo">
             <img
-              src="/images/spike.jpg" 
+              src="./images/spike.jpg" 
               alt="Foto de perfil"
               className="profile-photo"
             />
