@@ -1,68 +1,87 @@
 import React from "react";
+import "./App.css"; // Asegúrate de tener tus estilos aquí
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center p-8">
-      {/* Header */}
-      <header className="w-full max-w-3xl text-center border-b border-gray-800 pb-6">
-        <h1 className="text-3xl font-bold">Ismael García</h1>
-        <p className="text-gray-400">Full Stack Developer | AI & Big Data Enthusiast</p>
+    <div className="app">
+      {/* Encabezado fijo con menú horizontal */}
+      <header className="header">
+        <div className="container">
+          <div className="logo">
+            <img
+              src="/images/spike.jpg" 
+              alt="Foto de perfil"
+              className="profile-photo"
+            />
+            <h1>Ismael García</h1>
+          </div>
+          <nav className="nav">
+            <a href="#inicio" className="nav-link">
+              Inicio
+            </a>
+            <a href="#sobre-mi" className="nav-link">
+              Sobre Mí
+            </a>
+            <a href="#proyectos" className="nav-link">
+              Proyectos
+            </a>
+            <a href="#contacto" className="nav-link">
+              Contacto
+            </a>
+          </nav>
+        </div>
       </header>
 
-      {/* Secciones */}
-      <main className="w-full max-w-3xl mt-8 space-y-12">
-        {/* Sobre Mí */}
-        <section>
-          <h2 className="text-xl font-semibold">Sobre Mí</h2>
-          <p className="text-gray-300 mt-2">
-            Apasionado por la tecnología, desarrollo interfaces intuitivas y soluciones escalables con React, TypeScript y Python.
-          </p>
+      {/* Contenido Principal */}
+      <main className="main">
+        {/* Sección de Inicio */}
+        <section id="inicio" className="section hero">
+          <h2>Bienvenido a mi Portfolio</h2>
+          <p>Descubre mi trabajo y experiencia.</p>
         </section>
 
-        {/* Experiencia */}
-        <section>
-          <h2 className="text-xl font-semibold">Experiencia</h2>
-          <div className="mt-2 space-y-4">
-            <div>
-              <h3 className="font-medium">Full Stack Developer - NEORIS</h3>
-              <p className="text-gray-400 text-sm">Abr 2024 - Actualidad</p>
-              <p className="text-gray-300 mt-1">Desarrollo de soluciones IA con Python y TensorFlow.</p>
-            </div>
-            <div>
-              <h3 className="font-medium">Desarrollador Backstage - INCIBE</h3>
-              <p className="text-gray-400 text-sm">Diseño UI/UX y desarrollo back-end con Django y Node.js.</p>
-            </div>
+        {/* Sección Sobre Mí */}
+        <section id="sobre-mi" className="section about">
+          <h2>Sobre Mí</h2>
+          <div className="about-content">
+            <img
+              src="/ruta/a/tu-foto.jpg"
+              alt="Ismael García"
+              className="about-photo"
+            />
+            <p>
+              Soy un apasionado de la tecnología y desarrollo soluciones escalables
+              con React, TypeScript, Python y más. Mi enfoque está en crear
+              experiencias intuitivas y de alto rendimiento.
+            </p>
           </div>
         </section>
 
-        {/* Habilidades */}
-        <section>
-          <h2 className="text-xl font-semibold">Habilidades</h2>
-          <ul className="text-gray-300 mt-2 grid grid-cols-2 gap-2">
-            <li>Python</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>TypeScript</li>
-            <li>Django</li>
-            <li>APIs RESTful</li>
-          </ul>
+        {/* Sección Proyectos (o Experiencia) */}
+        <section id="proyectos" className="section projects">
+          <h2>Proyectos</h2>
+          <p>Aquí podrás ver algunos de mis proyectos destacados.</p>
         </section>
 
-        {/* Contacto */}
-        <section>
-          <h2 className="text-xl font-semibold">Contacto</h2>
-          <p className="text-gray-300 mt-2">📧 ismael.garcia.08052003@gmail.com</p>
-          <p className="text-gray-300">📍 Madrid, España</p>
-          <div className="mt-4 flex space-x-4">
-            <a href="https://github.com/tu-usuario" className="text-blue-400">Github</a>
-            <a href="https://linkedin.com/in/tu-usuario" className="text-blue-400">LinkedIn</a>
+        {/* Sección Contacto */}
+        <section id="contacto" className="section contact">
+          <h2>Contacto</h2>
+          <p>Email: ismael.garcia@example.com</p>
+          <p>Ciudad, País</p>
+          <div className="contact-links">
+            <a href="https://github.com/tu-usuario" className="nav-link">
+              Github
+            </a>
+            <a href="https://linkedin.com/in/tu-usuario" className="nav-link">
+              LinkedIn
+            </a>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="mt-12 text-gray-500 text-sm">
-        © {new Date().getFullYear()} Ismael García
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} Ismael García. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
