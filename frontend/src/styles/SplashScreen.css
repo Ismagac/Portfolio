@@ -38,7 +38,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    writing-mode: horizontal-tb;
+    white-space: nowrap;
+    transform: rotate(0deg);
   }
   
   /* Pseudo-elemento para mostrar un punto (bullet) a la izquierda de cada saludo */
