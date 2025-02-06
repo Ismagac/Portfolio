@@ -1,0 +1,76 @@
+/* Animación para que cada saludo aparezca y desaparezca suavemente */
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Contenedor para centrar los saludos y fijar su posición */
+  .splash-content {
+    position: relative;
+    text-align: center;
+    min-height: 6rem;
+  }
+  
+  /* Cada saludo ocupa la misma posición (centrado) y se anima individualmente */
+  .splash-content h1 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInOut 0.3s forwards;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: horizontal-tb;
+  }
+  
+  /* Pseudo-elemento para mostrar un punto (bullet) a la izquierda de cada saludo */
+  .splash-content h1::before {
+    content: "•";
+    margin-right: 0.5rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+  }
+  
+  /* Estilos de la pantalla de splash y animación de deslizamiento */
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: slideUp 1s forwards 7.5s;
+  }
+  
+  /* Animación para deslizar la pantalla completa hacia arriba */
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  
