@@ -1,6 +1,7 @@
 // App.tsx
 import React, { useState } from "react";
 import SplashScreen from "./components/SplashScreen"; 
+import Iridescence from './components/Iridiscence';
 import "./App.css";
 
 const App: React.FC = () => {
@@ -12,6 +13,7 @@ const App: React.FC = () => {
         <SplashScreen onAnimationEnd={() => setShowSplash(false)} />
       ) : (
         <div className="app">
+          <Iridescence color={[1, 1, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />
           {/* Encabezado fijo con menú horizontal */}
           <header className="header">
             <div className="container">
