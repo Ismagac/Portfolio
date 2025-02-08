@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import SplashScreen from "./components/SplashScreen"; 
 import Iridescence from './components/Iridiscence';
+import Dock from './components/Dock';
 import "./App.css";
 
 const App: React.FC = () => {
@@ -13,29 +14,21 @@ const App: React.FC = () => {
         <SplashScreen onAnimationEnd={() => setShowSplash(false)} />
       ) : (
         <div className="app">
-          <Iridescence color={[1, 0.2, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />
+          <Iridescence color={[1, 1, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />
           {/* Encabezado fijo con menú horizontal */}
           <header className="header">
             <div className="container">
-              <div className="logo">
-                <img
-                  src="images/spike.jpg" 
-                  alt="Foto de perfil"
-                  className="profile-photo"
-                />
-                <h1>Ismael García</h1>
-              </div>
-              <nav className="nav">
-                <a href="#sobre-mi" className="nav-link">
-                  Sobre Mí
-                </a>
-                <a href="#proyectos" className="nav-link">
-                  Proyectos
-                </a>
-                <a href="#contacto" className="nav-link">
-                  Contacto
-                </a>
-              </nav>
+              <Dock
+                collapsible={false}
+                position="top"
+                responsive="bottom"
+                items={[
+                  { icon: '🏠', target: '#inicio' },
+                  { icon: '👤', target: '#sobre-mi' },
+                  { icon: '💼', target: '#proyectos' },
+                  { icon: '📧', target: '#contacto' },
+                ]}
+              />
             </div>
           </header>
 
