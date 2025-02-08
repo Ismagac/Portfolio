@@ -20,7 +20,6 @@ body {
 
 /* Encabezado y menú */
 .header {
-  background-color: #111;
   position: fixed;
   top: 0;
   width: 100%;

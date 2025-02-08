@@ -19,16 +19,13 @@ const App: React.FC = () => {
             <div className="container">
               <div className="logo">
                 <img
-                  src="./images/spike.jpg" 
+                  src="images/spike.jpg" 
                   alt="Foto de perfil"
                   className="profile-photo"
                 />
                 <h1>Ismael García</h1>
               </div>
               <nav className="nav">
-                <a href="#inicio" className="nav-link">
-                  Inicio
-                </a>
                 <a href="#sobre-mi" className="nav-link">
                   Sobre Mí
                 </a>
