@@ -14,9 +14,13 @@ const App: React.FC = () => {
         <SplashScreen onAnimationEnd={() => setShowSplash(false)} />
       ) : (
         <div className="app">
-          <Iridescence color={[1, 1, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />
+          <Iridescence color={[0.4, 0.4, 0.4]} mouseReact={false} amplitude={0.1} speed={1.0} />
           {/* Encabezado fijo con menú horizontal */}
           <header className="header">
+            <div className="container">
+              <h1>isma</h1>
+            </div>
+
             <div className="container">
               <Dock
                 collapsible={false}
