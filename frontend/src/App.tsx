@@ -27,10 +27,10 @@ const App: React.FC = () => {
                 position="top"
                 responsive="bottom"
                 items={[
-                  { icon: '🏠', target: '#inicio' },
-                  { icon: '👤', target: '#sobre-mi' },
-                  { icon: '💼', target: '#proyectos' },
-                  { icon: '📧', target: '#contacto' },
+                  { icon: 'home', target: '#inicio' },
+                  { icon: 'about me', target: '#sobre-mi' },
+                  { icon: 'projects', target: '#proyectos' },
+                  { icon: 'contact me', target: '#contacto' },
                 ]}
               />
             </div>
