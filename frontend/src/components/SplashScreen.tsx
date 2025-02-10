@@ -9,7 +9,7 @@ const greetings = ["Hola", "Bonjour", "Hello", "こんにちは", "안녕하세�
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ onAnimationEnd }) => {
   useEffect(() => {
-    const totalTime = greetings.length * 0.3 * 1000 + 1000;
+    const totalTime = greetings.length * 0.22 * 1000 + 1000;
     const timer = setTimeout(() => {
       onAnimationEnd();
     }, totalTime);
