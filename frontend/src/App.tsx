@@ -26,11 +26,10 @@ const App: React.FC = () => {
               
               {/* Menú Superior dentro de la sección */}
               <header className="bg-opacity-20 bg-white rounded-full p-6 mb-6 max-w-3xl flex justify-between items-center">
-                <h1 className="text-lg font-normal">Ismael</h1>
+                <h1 className="text-lg font-lighter">Ismael</h1>
                 <nav className="flex gap-6">
                   <a href="#inicio" className="hover:scale-110 hover:text-black transition-colors">Projects</a>
                   <a href="#sobre-mi" className="hover:scale-110 hover:text-black transition-colors">About</a>
-                  <a href="#proyectos" className="hover:scale-110 hover:text-black transition-colors">Blog</a>
                   <a href="#contacto" className="hover:scale-110 hover:text-black transition-colors">Contact</a>
                 </nav>
               </header>
@@ -38,7 +37,7 @@ const App: React.FC = () => {
               {/* Contenido Principal más grande */}
               <section
                 id="inicio"
-                className="bg-gradient-to-r from-blue-500 via-purple-500 to-white-500 rounded-3xl p-12 relative shadow-lg min-h-[60vh]"
+                className="bg-gradient-to-r from-slate-950 via-cyan-700 to-cyan-400  rounded-3xl p-12 relative shadow-lg min-h-[60vh]"
               >
                 <h2 className="text-4xl font-light">Equal parts creative developer & designer</h2>
                 <div className="absolute bottom-4 left-4 bg-black p-3 rounded-full cursor-pointer">⬇</div>
@@ -59,17 +58,17 @@ const App: React.FC = () => {
           {/* Secciones adicionales enlazadas */}
           <section id="sobre-mi" className="mt-12 p-6 max-w-6xl">
             <h3 className="text-2xl font-normal mb-4">About Me</h3>
-            <p>...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam iure quas laudantium saepe eius temporibus odit impedit ratione eveniet, possimus perspiciatis consequatur, nulla doloribus sit ipsum. Laudantium officiis laboriosam minima!</p>
           </section>
 
           <section id="proyectos" className="mt-12 p-6 max-w-6xl">
             <h3 className="text-2xl font-normal mb-4">Projects</h3>
-            <p>...</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur recusandae repellat amet ab eaque blanditiis consequuntur pariatur ratione! Consequuntur quia placeat nisi vitae ratione dignissimos illo rem blanditiis esse.</p>
           </section>
 
           <section id="contacto" className="mt-12 p-6 max-w-6xl mb-24">
             <h3 className="text-2xl font-normal mb-4">Contact</h3>
-            <p>...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod esse earum, soluta placeat illum obcaecati officia sunt omnis sint numquam asperiores dolores provident. Dolorem alias iusto magnam possimus amet sunt.</p>
           </section>
         </div>
       )}
