@@ -26,7 +26,7 @@ const App: React.FC = () => {
               
               {/* Menú Superior dentro de la sección */}
               <header className="bg-opacity-20 bg-white rounded-full p-6 mb-6 max-w-3xl flex justify-between items-center">
-                <h1 className="text-lg font-lighter">Ismael</h1>
+                <h1 className="text-lg font-bold">Isma</h1>
                 <nav className="flex gap-6">
                   <a href="#inicio" className="hover:scale-110 hover:text-black transition-colors">Projects</a>
                   <a href="#sobre-mi" className="hover:scale-110 hover:text-black transition-colors">About</a>
