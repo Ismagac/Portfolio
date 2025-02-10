@@ -35,8 +35,8 @@ const CircularStatSlider: React.FC<CircularStatSliderProps> = ({ stats }) => {
             key={index}
             className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-500 ${
               index === currentIndex 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-full'
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 translate-x-full'
             }`}
           >
             <p className="text-2xl font-normal">{stat.value}</p>

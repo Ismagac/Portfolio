@@ -3,12 +3,13 @@ import SplashScreen from "./components/SplashScreen";
 import Iridescence from "./components/Iridiscence";
 import Dock from "./components/Dock";
 import CircularStatSlider from "./components/CircularStats";
+import RotatingText from "./components/RotatinText";
 import "./App.css";
 
 const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState<boolean>(true);
   const stats = [
-    { value: '10+', description: 'Major projects delivered successfully' },
+    { value: '450', description: 'Major projects delivered successfully' },
     { value: '453K', description: 'Total lines of code written' },
     { value: '5', description: 'Years of professional experience' }
   ];
@@ -39,8 +40,18 @@ const App: React.FC = () => {
                 id="inicio"
                 className="bg-gradient-to-r from-slate-950 via-cyan-700 to-cyan-400  rounded-3xl p-12 relative shadow-lg min-h-[60vh]"
               >
-                <h2 className="text-4xl font-light">Equal parts creative developer & designer</h2>
-                <div className="absolute bottom-4 left-4 bg-black p-3 rounded-full cursor-pointer">⬇</div>
+                <RotatingText
+                  texts={['React', 'Bits', 'Is', 'Cool!']}
+                  mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={2000}
+                />
               </section>
             </div>
 
