@@ -1,98 +1,49 @@
-// App.tsx
-import React, { useState } from "react";
-import SplashScreen from "./components/SplashScreen"; 
-import Iridescence from './components/Iridiscence';
-import Dock from './components/Dock';
-import "./App.css";
+import React from "react";
+import { Card, CardContent } from "./components/CardComp";
+import StarBorder from "./components/ButtonStar";
+import { Menu, Search, User } from "lucide-react";
 
-const App: React.FC = () => {
-  const [showSplash, setShowSplash] = useState<boolean>(true);
-
+export default function HomePage() {
   return (
-    <>
-      {showSplash ? (
-        <SplashScreen onAnimationEnd={() => setShowSplash(false)} />
-      ) : (
-        <div className="app">
-          <Iridescence color={[0.4, 0.4, 0.4]} mouseReact={false} amplitude={0.1} speed={1.0} />
-          {/* Encabezado fijo con menú horizontal */}
-          <header className="header">
-            <div className="container">
-              <h1>isma</h1>
-            </div>
-
-            <div className="container">
-              <Dock
-                collapsible={false}
-                position="top"
-                responsive="bottom"
-                items={[
-                  { icon: 'home', target: '#inicio' },
-                  { icon: 'about me', target: '#sobre-mi' },
-                  { icon: 'projects', target: '#proyectos' },
-                  { icon: 'contact me', target: '#contacto' },
-                ]}
-              />
-            </div>
-          </header>
-
-          {/* Contenido Principal */}
-          <main className="main">
-            {/* Sección de Inicio */}
-            <section id="inicio" className="section hero">
-              <h2>Bienvenido a mi Portfolio</h2>
-              <p>Descubre mi trabajo y experiencia.</p>
-            </section>
-
-            {/* Sección Sobre Mí */}
-            <section id="sobre-mi" className="section about">
-              <h2>Sobre Mí</h2>
-              <div className="about-content">
-                <img
-                  src="/ruta/a/tu-foto.jpg"
-                  alt="Ismael García"
-                  className="about-photo"
-                />
-                <p>
-                  Soy un apasionado de la tecnología y desarrollo soluciones escalables
-                  con React, TypeScript, Python y más. Mi enfoque está en crear
-                  experiencias intuitivas y de alto rendimiento.
-                </p>
-              </div>
-            </section>
-
-            {/* Sección Proyectos */}
-            <section id="proyectos" className="section projects">
-              <h2>Proyectos</h2>
-              <p>Aquí podrás ver algunos de mis proyectos destacados.</p>
-            </section>
-
-            {/* Sección Contacto */}
-            <section id="contacto" className="section contact">
-              <h2>Contacto</h2>
-              <p>Email: ismael.garcia@example.com</p>
-              <p>Ciudad, País</p>
-              <div className="contact-links">
-                <a href="https://github.com/tu-usuario" className="nav-link">
-                  Github
-                </a>
-                <a href="https://linkedin.com/in/tu-usuario" className="nav-link">
-                  LinkedIn
-                </a>
-              </div>
-            </section>
-          </main>
-
-          {/* Footer */}
-          <footer className="footer">
-            <p>
-              © {new Date().getFullYear()} Ismael García. Todos los derechos reservados.
-            </p>
-          </footer>
+    <div className="min-h-screen bg-gray-100">
+      {/* Menú Superior */}
+      <header className="bg-white shadow-md p-4 flex justify-between items-center">
+        <div className="flex items-center gap-4">
+          <Menu className="w-6 h-6 cursor-pointer" />
+          <h1 className="text-xl font-bold">Mi Proyecto</h1>
         </div>
-      )}
-    </>
-  );
-};
+        <div className="flex items-center gap-4">
+          <Search className="w-6 h-6 cursor-pointer" />
+          <User className="w-6 h-6 cursor-pointer" />
+        </div>
+      </header>
 
-export default App;
+      {/* Contenido Principal */}
+      <main className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Tarjeta Grande */}
+        <Card className="col-span-1 md:col-span-3 bg-blue-500 text-white p-6 rounded-2xl shadow-lg">
+          <CardContent>
+            <h2 className="text-2xl font-bold">Bienvenido a la Plataforma</h2>
+            <p className="mt-2">Aquí puedes encontrar toda la información relevante.</p>
+            <StarBorder  as="button" className="custom-class" color="cyan" speed="5s">
+              More Info
+            </StarBorder>
+          </CardContent>
+        </Card>
+
+        {/* Tarjetas Secundarias */}
+        {[1, 2, 3, 4, 5, 6].map((item) => (
+          <Card key={item} className="p-4 shadow-md rounded-2xl bg-white">
+            <CardContent>
+              <h3 className="text-lg font-semibold">Tarjeta {item}</h3>
+              <p className="text-gray-600 mt-2">Descripción breve del contenido.</p>
+              <StarBorder  as="button" className="custom-class" color="cyan" speed="5s">
+                More About
+              </StarBorder>
+            </CardContent>
+          </Card>
+        ))}
+      </main>
+    </div>
+  );
+}

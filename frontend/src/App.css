@@ -71,6 +71,15 @@ body {
 }
 
 /* Secciones */
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}	
+
 .section {
   padding: 60px 20px;
   text-align: center;
