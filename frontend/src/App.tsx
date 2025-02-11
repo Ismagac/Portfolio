@@ -4,14 +4,18 @@ import Iridescence from "./components/Iridiscence";
 import Dock from "./components/Dock";
 import CircularStatSlider from "./components/CircularStats";
 import RotatingText from "./components/RotatinText";
+import PixelCard from "./components/PixelCard";
+import CardFlip from "./components/CardFlip";
 import "./App.css";
 
 const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState<boolean>(true);
   const stats = [
-    { value: '450', description: 'Major projects delivered successfully' },
+    { value: '+450', description: 'Liters of coffee' },
+    { value: '1 year', description: 'Professional experience' },
     { value: '453K', description: 'Total lines of code written' },
-    { value: '5', description: 'Years of professional experience' }
+    { value: '5', description: 'Successful freelance SaaS projects' },
+    { value: '♾', description: 'Will to improve every day' }
   ];
 
   return (
@@ -36,10 +40,7 @@ const App: React.FC = () => {
               </header>
 
               {/* Contenido Principal más grande */}
-              <section
-                id="inicio"
-                className="bg-gradient-to-r from-slate-950 via-cyan-700 to-cyan-400  rounded-3xl p-12 relative shadow-lg min-h-[60vh]"
-              >
+              <PixelCard variant='default' className="bg-black bg-opacity-70 absolute top-0 left-0 shadow-lg min-h-[60vh] w-full">
                 <RotatingText
                   texts={['React', 'Bits', 'Is', 'Cool!']}
                   mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
@@ -52,17 +53,14 @@ const App: React.FC = () => {
                   transition={{ type: "spring", damping: 30, stiffness: 400 }}
                   rotationInterval={2000}
                 />
-              </section>
+              </PixelCard>
             </div>
 
             {/* Sección Derecha encajada a modo de puzzle */}
-            <div className="w-full md:w-1/3 flex flex-col items-center gap-4">
+            <div className="w-full md:w-1/3 flex flex-col items-center gap-4 mt-6">
              <CircularStatSlider stats={stats} />
 
-              <div className="bg-purple-600 text-white p-4 rounded-3xl shadow-lg flex flex-col items-start w-full">
-                <div className="bg-black p-3 rounded-full mb-2">🔀</div>
-                <p className="font-normal">Building a responsive design system with Tailwind CSS.</p>
-              </div>
+              <CardFlip/>
             </div>
           </div>
 
