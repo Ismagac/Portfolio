@@ -1,36 +1,46 @@
 import React from 'react';
-import Iridescence from './Iridiscence';
 
 class CardFlip extends React.Component {
   render() {
     return (
-      <div className="group relative h-96 w-72 [perspective:1000px]">
+      <div
+        className="group relative h-96 w-72 [perspective:1000px]"
+        style={{ fontFamily: 'Gotham' }} 
+      >
         <div className="absolute duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-          <div className="absolute w-full h-full rounded-xl bg-gradient-to-br from-violet-400 to-indigo-600 p-6 text-white [backface-visibility:hidden]">
+          {/* Front Side with font-weight 500 */}
+          <div
+            className="absolute w-full h-full rounded-xl bg-gradient-to-br from-indigo-900 to-gray-800 p-6 text-white [backface-visibility:hidden]"
+            style={{ fontWeight: 500 }}
+          >
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-start">
-                <div className="text-3xl font-bold">Wanna talk to me?</div>
+                <div className="text-3xl">Wanna talk to me?</div>
               </div>
-              <div className="mt-4">
+              <div className="mt-4" style={{ fontWeight: 'normal' }}>
                 <p className="text-lg">
                   Front content goes here. This is visible before hovering.
                 </p>
               </div>
-              <div className="mt-auto">
+              <div className="mt-auto" style={{ fontWeight: 'normal' }}>
                 <p className="text-sm opacity-75">Hover to flip!</p>
               </div>
             </div>
           </div>
 
-          <div className="absolute w-full h-full rounded-xl bg-gradient-to-br from-pink-400 to-purple-600 p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]">
+          {/* Back Side with font-weight 500 for the title, normal for the rest */}
+          <div
+            className="absolute w-full h-full rounded-xl bg-gradient-to-br from-purple-800 to-pink-700 p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]"
+            style={{ fontWeight: 500 }}
+          >
             <div className="flex flex-col h-full">
-              <div className="text-2xl font-bold mb-4">Back Side</div>
-              <div className="flex-grow">
+              <div className="text-2xl mb-4">Back Side</div>
+              <div className="flex-grow" style={{ fontWeight: 'normal' }}>
                 <p className="text-lg">
                   Back content goes here. This is visible after hovering.
                 </p>
               </div>
-              <div className="flex justify-between items-center mt-auto">
+              <div className="flex justify-between items-center mt-auto" style={{ fontWeight: 'normal' }}>
                 <button className="px-4 py-2 bg-white text-purple-600 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
                   Action
                 </button>
