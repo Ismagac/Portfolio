@@ -10,7 +10,7 @@ class CardFlip extends React.Component {
         <div className="absolute duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
           {/* Front Side with font-weight 500 */}
           <div
-            className="absolute w-full h-full rounded-xl bg-gradient-to-br from-indigo-900 to-gray-800 p-6 text-white [backface-visibility:hidden]"
+            className="absolute w-full h-full rounded-xl bg-gradient-to-br from-slate-800 to-gray-900 p-6 text-white [backface-visibility:hidden]"
             style={{ fontWeight: 500 }}
           >
             <div className="flex flex-col h-full">
@@ -30,7 +30,7 @@ class CardFlip extends React.Component {
 
           {/* Back Side with font-weight 500 for the title, normal for the rest */}
           <div
-            className="absolute w-full h-full rounded-xl bg-gradient-to-br from-purple-800 to-pink-700 p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]"
+            className="absolute w-full h-full rounded-xl bg-gradient-to-br from-gray-800 to-slate-700 p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]"
             style={{ fontWeight: 500 }}
           >
             <div className="flex flex-col h-full">
