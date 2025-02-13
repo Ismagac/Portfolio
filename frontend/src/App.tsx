@@ -27,7 +27,7 @@ const App: React.FC = () => {
           {/* Sección Principal con fondo iridiscente */}
           <div className="relative flex flex-col md:flex-row w-full max-w-6xl gap-6">
             <div className="flex-1 relative p-6">
-              <Iridescence color={[0.2, 0.2, 0.2]} mouseReact={false} amplitude={0.1} speed={1.0} />
+              <Iridescence color={[0.3, 0.2, 0.2]} mouseReact={false} amplitude={0.1} speed={1.0} />
               
               {/* Menú Superior dentro de la sección */}
               <header className="bg-opacity-20 bg-white rounded-full p-6 mb-6 max-w-3xl flex justify-between items-center">
