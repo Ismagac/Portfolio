@@ -4,7 +4,7 @@ class CardFlip extends React.Component {
   render() {
     return (
       <div
-        className="group relative h-96 w-72 [perspective:1000px]"
+        className="group relative h-96 w-72 [perspective:1000px] transform transition-transform hover:scale-105 hover:ring-4 hover:ring-pink-500"
         style={{ fontFamily: 'Gotham' }} 
       >
         <div className="absolute duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
