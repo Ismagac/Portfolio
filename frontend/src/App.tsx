@@ -79,11 +79,6 @@ const App: React.FC = () => {
           <section
             id="sobre-mi"
             className="relative overflow-hidden mt-12 p-6 max-w-6xl hover:scale-105 transition-transform duration-500"
-            style={{
-              position: 'relative',
-              background: 'conic-gradient(#f0f, #0ff, #ff0, #f0f)',
-              animation: 'swirl 15s linear infinite'
-            }}
           >
             <h3 className="text-2xl font-normal mb-4">About Me</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam iure quas laudantium saepe eius temporibus odit impedit ratione eveniet, possimus perspiciatis consequatur, nulla doloribus sit ipsum. Laudantium officiis laboriosam minima!</p>
@@ -92,10 +87,6 @@ const App: React.FC = () => {
           <section
             id="proyectos"
             className="relative overflow-hidden mt-12 p-6 max-w-6xl hover:scale-105 transition-transform duration-500"
-            style={{
-              background: 'conic-gradient(#0ff, #ff0, #f0f, #0ff)',
-              animation: 'swirl 15s linear infinite'
-            }}
           >
             <h3 className="text-2xl font-normal mb-4">Projects</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur recusandae repellat amet ab eaque blanditiis consequuntur pariatur ratione! Consequuntur quia placeat nisi vitae ratione dignissimos illo rem blanditiis esse.</p>
@@ -104,10 +95,6 @@ const App: React.FC = () => {
           <section
             id="contacto"
             className="relative overflow-hidden mt-12 p-6 max-w-6xl mb-24 hover:scale-105 transition-transform duration-500"
-            style={{
-              background: 'conic-gradient(#ff0, #f0f, #0ff, #ff0)',
-              animation: 'swirl 15s linear infinite'
-            }}
           >
             <h3 className="text-2xl font-normal mb-4">Contact</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod esse earum, soluta placeat illum obcaecati officia sunt omnis sint numquam asperiores dolores provident. Dolorem alias iusto magnam possimus amet sunt.</p>
