@@ -29,12 +29,6 @@ const App: React.FC = () => {
             ? "min-h-screen text-white bg-black flex flex-col items-center"
             : "min-h-screen text-black bg-white flex flex-col items-center"
         }>
-          <button
-            className="p-2 m-2 border rounded"
-            onClick={() => setDarkTheme(!darkTheme)}
-          >
-            Toggle Theme
-          </button>
           <div className="relative flex flex-col md:flex-row w-full max-w-6xl gap-6">
             <div className="flex-1 relative p-6">
               <Iridescence color={[0.3, 0.2, 0.2]} mouseReact={false} amplitude={0.1} speed={1.0} />
@@ -45,6 +39,12 @@ const App: React.FC = () => {
                   <a href="#inicio" className="hover:scale-110 hover:text-black transition-colors">Projects</a>
                   <a href="#sobre-mi" className="hover:scale-110 hover:text-black transition-colors">About</a>
                   <a href="#contacto" className="hover:scale-110 hover:text-black transition-colors">Contact</a>
+                  <button
+                    className="hover:scale-110 transition-colors"
+                    onClick={() => setDarkTheme(!darkTheme)}
+                  >
+                    {darkTheme ? "🌞" : "🌙"}
+                  </button>
                 </nav>
               </header>
 
