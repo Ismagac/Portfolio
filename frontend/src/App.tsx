@@ -26,8 +26,8 @@ const App: React.FC = () => {
       ) : (
         <div className={
           darkTheme
-            ? "min-h-screen text-white bg-black flex flex-col items-center"
-            : "min-h-screen text-black bg-white flex flex-col items-center"
+            ? "min-h-screen text-white flex flex-col items-center"
+            : "min-h-screen text-black flex flex-col items-center"
         }>
           <div className="relative flex flex-col md:flex-row w-full max-w-6xl gap-6">
             <div className="flex-1 relative p-6">
