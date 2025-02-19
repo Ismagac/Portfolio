@@ -10,7 +10,6 @@ import "./App.css";
 
 const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState<boolean>(true);
-  const [darkTheme, setDarkTheme] = useState<boolean>(true);
   const stats = [
     { value: '+450', description: 'Liters of coffee' },
     { value: '1 year', description: 'Professional experience' },
@@ -24,27 +23,16 @@ const App: React.FC = () => {
       {showSplash ? (
         <SplashScreen onAnimationEnd={() => setShowSplash(false)} />
       ) : (
-        <div className={
-          darkTheme
-            ? "min-h-screen text-white bg-black flex flex-col items-center"
-            : "min-h-screen text-black bg-white flex flex-col items-center"
-        }>
+        <div className="min-h-screen text-white bg-black flex flex-col items-center">
           <div className="relative flex flex-col md:flex-row w-full max-w-6xl gap-6">
             <div className="flex-1 relative p-6">
-              <Iridescence color={[0.3, 0.2, 0.2]} mouseReact={false} amplitude={0.1} speed={1.0} />
-              
+            <Iridescence color={[0.3, 0.2, 0.2]} mouseReact={false} amplitude={0.1} speed={1.0} />              
               <header className="bg-opacity-20 bg-white rounded-full p-6 mb-6 max-w-3xl flex justify-between items-center">
                 <h1 className="text-lg font-bold">Isma</h1>
                 <nav className="flex gap-6">
                   <a href="#inicio" className="hover:scale-110 hover:text-black transition-colors">Projects</a>
                   <a href="#sobre-mi" className="hover:scale-110 hover:text-black transition-colors">About</a>
                   <a href="#contacto" className="hover:scale-110 hover:text-black transition-colors">Contact</a>
-                  <button
-                    className="hover:scale-110 transition-colors"
-                    onClick={() => setDarkTheme(!darkTheme)}
-                  >
-                    {darkTheme ? "🌞" : "🌙"}
-                  </button>
                 </nav>
               </header>
 
