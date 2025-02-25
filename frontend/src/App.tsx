@@ -49,7 +49,7 @@ const App: React.FC = () => {
 
               <PixelCard variant='default' className="bg-gradient-to-br from-purple-700 via-pink-700 to-red-500 bg-opacity-70 absolute top-0 left-0 shadow-lg min-h-[60vh] w-full">
               <div className="absolute top-40 left-40 min-h-[60vh] w-50">
-                <h2 className="text-4xl font-bold">Hello, I'm Isma!</h2>
+                <h2 className="text-4xl font-medium">Isma</h2>
                 <RotatingText
                   texts={['React', 'Bits', 'Is', 'Cool!']}
                   mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
