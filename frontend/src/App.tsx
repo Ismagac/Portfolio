@@ -31,7 +31,7 @@ const App: React.FC = () => {
         }>
           <div className="relative flex flex-col md:flex-row w-full max-w-6xl gap-6">
             <div className="flex-1 relative p-6">
-            <Iridescence color={darkTheme ? [0.2, 0.1, 0.2] : [0.9, 1, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />              
+            <Iridescence color={darkTheme ? [0.2, 0.1, 0.2] : [1, 0.9, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />              
               <header className="bg-opacity-20 bg-white rounded-full p-6 mb-6 max-w-3xl flex justify-between items-center">
                 <h1 className="text-lg font-bold">Isma</h1>
                 <nav className="flex gap-6">
@@ -43,11 +43,11 @@ const App: React.FC = () => {
                   className="hover:scale-110 transition-colors"
                   onClick={() => setDarkTheme(!darkTheme)}
                 >
-                  {darkTheme ? "☀" : "🌚"}
+                  {darkTheme ? "Light" : "Dark"}
                 </button>
               </header>
 
-              <PixelCard variant='default' className="bg-black bg-opacity-70 absolute top-0 left-0 shadow-lg min-h-[60vh] w-full">
+              <PixelCard variant='default' className="bg-gradient-to-br from-purple-700 via-pink-700 to-red-500 bg-opacity-70 absolute top-0 left-0 shadow-lg min-h-[60vh] w-full">
               <div className="absolute top-40 left-40 min-h-[60vh] w-50">
                 <h2 className="text-4xl font-bold">Hello, I'm Isma!</h2>
                 <RotatingText
@@ -85,7 +85,7 @@ const App: React.FC = () => {
             id="sobre-mi"
             className="relative overflow-hidden mt-12 p-6 max-w-6xl hover:scale-105 transition-transform duration-500"
           >
-            <h3 className="text-2xl font-normal mb-4">About Me</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-purple-600">About Me</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam iure quas laudantium saepe eius temporibus odit impedit ratione eveniet, possimus perspiciatis consequatur, nulla doloribus sit ipsum. Laudantium officiis laboriosam minima!</p>
           </section>
 
