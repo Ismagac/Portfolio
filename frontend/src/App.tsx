@@ -43,7 +43,7 @@ const App: React.FC = () => {
                   className="hover:scale-110 transition-colors"
                   onClick={() => setDarkTheme(!darkTheme)}
                 >
-                  {darkTheme ? "Light" : "Dark"}
+                  {darkTheme ? "Claro" : "Oscuro"}
                 </button>
               </header>
 
