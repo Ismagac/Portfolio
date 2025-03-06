@@ -127,30 +127,229 @@ const App: React.FC = () => {
                     : "bg-gradient-to-r from-indigo-600 to-indigo-800"
                 }`}>Projects</h3>
               </div>
-              <p className={`text-lg leading-relaxed ml-2 pl-4 ${
+              <p className={`text-lg leading-relaxed ml-2 pl-4 mb-8 ${
                 darkTheme 
                   ? "border-l border-indigo-500/20" 
                   : "border-l border-indigo-600/30"
               }`}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur recusandae repellat amet ab eaque blanditiis consequuntur pariatur ratione! Consequuntur quia placeat nisi vitae ratione dignissimos illo rem blanditiis esse.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur recusandae repellat amet ab eaque blanditiis consequuntur pariatur ratione!
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
-                  darkTheme 
-                    ? "bg-white/5 border border-white/10 hover:border-indigo-400/30" 
-                    : "bg-black/5 border border-black/5 hover:border-indigo-500/20"
-                }`}>
-                  <h4 className="text-xl font-medium mb-2">Project 1</h4>
-                  <p className={darkTheme ? "opacity-80" : "opacity-70"}>Project description goes here</p>
+              {/* Web Development Projects */}
+              <div className="mb-10">
+                <div className="flex items-center mb-4">
+                  <div className={`h-6 w-1 rounded-full mr-3 ${
+                    darkTheme 
+                      ? "bg-gradient-to-b from-sky-400/80 to-sky-600/70" 
+                      : "bg-gradient-to-b from-sky-500/90 to-sky-700/80"
+                  }`}></div>
+                  <h4 className={`text-xl font-medium ${darkTheme ? "text-sky-300" : "text-sky-700"}`}>
+                    Web Development
+                  </h4>
                 </div>
-                <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
-                  darkTheme 
-                    ? "bg-white/5 border border-white/10 hover:border-indigo-400/30" 
-                    : "bg-black/5 border border-black/5 hover:border-indigo-500/20"
-                }`}>
-                  <h4 className="text-xl font-medium mb-2">Project 2</h4>
-                  <p className={darkTheme ? "opacity-80" : "opacity-70"}>Project description goes here</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                    darkTheme 
+                      ? "bg-white/5 border border-white/10 hover:border-sky-400/30" 
+                      : "bg-black/5 border border-black/5 hover:border-sky-500/20"
+                  }`}>
+                    <h5 className="text-xl font-medium mb-2">E-commerce Platform</h5>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                      }`}>React</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                      }`}>Node.js</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                      }`}>MongoDB</span>
+                    </div>
+                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                      A full-featured e-commerce solution with product management, cart functionality, and secure payment processing.
+                    </p>
+                    <div className="flex gap-3 mt-2">
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-sky-900/30 text-sky-300 hover:bg-sky-800/50" 
+                          : "bg-sky-100 text-sky-700 hover:bg-sky-200"
+                      }`}>Live Demo</a>
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-white/10 hover:bg-white/20" 
+                          : "bg-black/10 hover:bg-black/20"
+                      }`}>Source Code</a>
+                    </div>
+                  </div>
+                  
+                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                    darkTheme 
+                      ? "bg-white/5 border border-white/10 hover:border-sky-400/30" 
+                      : "bg-black/5 border border-black/5 hover:border-sky-500/20"
+                  }`}>
+                    <h5 className="text-xl font-medium mb-2">Analytics Dashboard</h5>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                      }`}>Vue.js</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                      }`}>D3.js</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                      }`}>Firebase</span>
+                    </div>
+                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                      Real-time analytics dashboard with interactive charts, filters, and customizable reporting features.
+                    </p>
+                    <div className="flex gap-3 mt-2">
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-sky-900/30 text-sky-300 hover:bg-sky-800/50" 
+                          : "bg-sky-100 text-sky-700 hover:bg-sky-200"
+                      }`}>Live Demo</a>
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-white/10 hover:bg-white/20" 
+                          : "bg-black/10 hover:bg-black/20"
+                      }`}>Source Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Mobile Development Projects */}
+              <div className="mb-10">
+                <div className="flex items-center mb-4">
+                  <div className={`h-6 w-1 rounded-full mr-3 ${
+                    darkTheme 
+                      ? "bg-gradient-to-b from-violet-400/80 to-violet-600/70" 
+                      : "bg-gradient-to-b from-violet-500/90 to-violet-700/80"
+                  }`}></div>
+                  <h4 className={`text-xl font-medium ${darkTheme ? "text-violet-300" : "text-violet-700"}`}>
+                    Mobile Apps
+                  </h4>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                    darkTheme 
+                      ? "bg-white/5 border border-white/10 hover:border-violet-400/30" 
+                      : "bg-black/5 border border-black/5 hover:border-violet-500/20"
+                  }`}>
+                    <h5 className="text-xl font-medium mb-2">Fitness Tracker</h5>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-violet-900/50 text-violet-300" : "bg-violet-100 text-violet-700"
+                      }`}>React Native</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-violet-900/50 text-violet-300" : "bg-violet-100 text-violet-700"
+                      }`}>Redux</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-violet-900/50 text-violet-300" : "bg-violet-100 text-violet-700"
+                      }`}>Health API</span>
+                    </div>
+                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                      Mobile app for tracking workouts, nutrition, and wellness metrics with social sharing capabilities.
+                    </p>
+                    <div className="flex gap-3 mt-2">
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-violet-900/30 text-violet-300 hover:bg-violet-800/50" 
+                          : "bg-violet-100 text-violet-700 hover:bg-violet-200"
+                      }`}>Case Study</a>
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-white/10 hover:bg-white/20" 
+                          : "bg-black/10 hover:bg-black/20"
+                      }`}>App Store</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Design Projects */}
+              <div>
+                <div className="flex items-center mb-4">
+                  <div className={`h-6 w-1 rounded-full mr-3 ${
+                    darkTheme 
+                      ? "bg-gradient-to-b from-amber-400/80 to-amber-600/70" 
+                      : "bg-gradient-to-b from-amber-500/90 to-amber-700/80"
+                  }`}></div>
+                  <h4 className={`text-xl font-medium ${darkTheme ? "text-amber-300" : "text-amber-700"}`}>
+                    UI/UX Projects
+                  </h4>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                    darkTheme 
+                      ? "bg-white/5 border border-white/10 hover:border-amber-400/30" 
+                      : "bg-black/5 border border-black/5 hover:border-amber-500/20"
+                  }`}>
+                    <h5 className="text-xl font-medium mb-2">Banking App Redesign</h5>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                      }`}>Figma</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                      }`}>Prototyping</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                      }`}>User Research</span>
+                    </div>
+                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                      Complete redesign of a banking application with focus on accessibility and streamlined user journeys.
+                    </p>
+                    <div className="flex gap-3 mt-2">
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-amber-900/30 text-amber-300 hover:bg-amber-800/50" 
+                          : "bg-amber-100 text-amber-700 hover:bg-amber-200"
+                      }`}>View Design</a>
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-white/10 hover:bg-white/20" 
+                          : "bg-black/10 hover:bg-black/20"
+                      }`}>Case Study</a>
+                    </div>
+                  </div>
+                  
+                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                    darkTheme 
+                      ? "bg-white/5 border border-white/10 hover:border-amber-400/30" 
+                      : "bg-black/5 border border-black/5 hover:border-amber-500/20"
+                  }`}>
+                    <h5 className="text-xl font-medium mb-2">Design System</h5>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                      }`}>Storybook</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                      }`}>Styled Components</span>
+                      <span className={`text-xs px-2 py-1 rounded ${
+                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                      }`}>Documentation</span>
+                    </div>
+                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                      Comprehensive design system with component library, usage guidelines, and accessibility documentation.
+                    </p>
+                    <div className="flex gap-3 mt-2">
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-amber-900/30 text-amber-300 hover:bg-amber-800/50" 
+                          : "bg-amber-100 text-amber-700 hover:bg-amber-200"
+                      }`}>View System</a>
+                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                        darkTheme 
+                          ? "bg-white/10 hover:bg-white/20" 
+                          : "bg-black/10 hover:bg-black/20"
+                      }`}>Documentation</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
