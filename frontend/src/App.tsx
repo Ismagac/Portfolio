@@ -84,25 +84,25 @@ const App: React.FC = () => {
           <section id="sobre-mi" className="w-full max-w-6xl mt-20 mb-16">
             <div className={`backdrop-blur-md rounded-xl p-8 shadow-xl transition-all duration-500 transform hover:translate-y-[-5px] ${
               darkTheme 
-                ? "bg-gradient-to-br from-slate-900/70 to-slate-800/40 border border-slate-700/30 hover:shadow-slate-700/20" 
-                : "bg-gradient-to-br from-slate-100/90 to-gray-50/60 border border-slate-300/40 hover:shadow-slate-400/20"
+                ? "bg-gradient-to-br from-gray-950 to-gray-900 border border-gray-800/40 hover:shadow-gray-900/30" 
+                : "bg-gradient-to-br from-gray-50 to-white border border-gray-200/60 hover:shadow-gray-300/30"
             }`}>
               <div className="flex items-center mb-6">
                 <div className={`h-10 w-1 rounded-full mr-4 ${
                   darkTheme 
-                    ? "bg-gradient-to-b from-amber-400/80 to-amber-600/70" 
-                    : "bg-gradient-to-b from-amber-500/90 to-amber-700/80"
+                    ? "bg-gradient-to-b from-gray-400 to-gray-600" 
+                    : "bg-gradient-to-b from-gray-500 to-gray-700"
                 }`}></div>
-                <h3 className={`text-3xl font-medium bg-clip-text text-transparent ${
+                <h3 className={`text-3xl font-medium ${
                   darkTheme 
-                    ? "bg-gradient-to-r from-amber-300 to-amber-500" 
-                    : "bg-gradient-to-r from-amber-600 to-amber-800"
+                    ? "text-gray-100" 
+                    : "text-gray-800"
                 }`}>About Me</h3>
               </div>
               <p className={`text-lg leading-relaxed ml-2 pl-4 ${
                 darkTheme 
-                  ? "border-l border-amber-500/20" 
-                  : "border-l border-amber-600/30"
+                  ? "border-l border-gray-700 text-gray-300" 
+                  : "border-l border-gray-300 text-gray-600"
               }`}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam iure quas laudantium saepe eius temporibus odit impedit ratione eveniet, possimus perspiciatis consequatur, nulla doloribus sit ipsum. Laudantium officiis laboriosam minima!
               </p>
@@ -112,25 +112,25 @@ const App: React.FC = () => {
           <section id="proyectos" className="w-full max-w-6xl mb-16">
             <div className={`backdrop-blur-md rounded-xl p-8 shadow-xl transition-all duration-500 transform hover:translate-y-[-5px] ${
               darkTheme 
-                ? "bg-gradient-to-br from-zinc-900/70 to-neutral-800/40 border border-zinc-700/30 hover:shadow-zinc-700/20" 
-                : "bg-gradient-to-br from-zinc-100/90 to-neutral-50/60 border border-zinc-300/40 hover:shadow-zinc-400/20"
+                ? "bg-gradient-to-br from-gray-950 to-gray-900 border border-gray-800/40 hover:shadow-gray-900/30" 
+                : "bg-gradient-to-br from-gray-50 to-white border border-gray-200/60 hover:shadow-gray-300/30"
             }`}>
               <div className="flex items-center mb-6">
                 <div className={`h-10 w-1 rounded-full mr-4 ${
                   darkTheme 
-                    ? "bg-gradient-to-b from-indigo-400/80 to-indigo-600/70" 
-                    : "bg-gradient-to-b from-indigo-500/90 to-indigo-700/80"
+                    ? "bg-gradient-to-b from-gray-400 to-gray-600" 
+                    : "bg-gradient-to-b from-gray-500 to-gray-700"
                 }`}></div>
-                <h3 className={`text-3xl font-medium bg-clip-text text-transparent ${
+                <h3 className={`text-3xl font-medium ${
                   darkTheme 
-                    ? "bg-gradient-to-r from-indigo-300 to-indigo-500" 
-                    : "bg-gradient-to-r from-indigo-600 to-indigo-800"
+                    ? "text-gray-100" 
+                    : "text-gray-800"
                 }`}>Projects</h3>
               </div>
               <p className={`text-lg leading-relaxed ml-2 pl-4 mb-8 ${
                 darkTheme 
-                  ? "border-l border-indigo-500/20" 
-                  : "border-l border-indigo-600/30"
+                  ? "border-l border-gray-700 text-gray-300" 
+                  : "border-l border-gray-300 text-gray-600"
               }`}>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur recusandae repellat amet ab eaque blanditiis consequuntur pariatur ratione!
               </p>
@@ -140,79 +140,83 @@ const App: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <div className={`h-6 w-1 rounded-full mr-3 ${
                     darkTheme 
-                      ? "bg-gradient-to-b from-sky-400/80 to-sky-600/70" 
-                      : "bg-gradient-to-b from-sky-500/90 to-sky-700/80"
+                      ? "bg-gradient-to-b from-blue-500/60 to-blue-700/60" 
+                      : "bg-gradient-to-b from-blue-600 to-blue-800"
                   }`}></div>
-                  <h4 className={`text-xl font-medium ${darkTheme ? "text-sky-300" : "text-sky-700"}`}>
+                  <h4 className={`text-xl font-medium ${darkTheme ? "text-blue-300" : "text-blue-700"}`}>
                     Web Development
                   </h4>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                  <div className={`p-6 rounded-lg transition-all ${
                     darkTheme 
-                      ? "bg-white/5 border border-white/10 hover:border-sky-400/30" 
-                      : "bg-black/5 border border-black/5 hover:border-sky-500/20"
+                      ? "bg-gray-900 border border-gray-800 hover:border-blue-900" 
+                      : "bg-white border border-gray-200 hover:border-blue-200 shadow-sm"
                   }`}>
-                    <h5 className="text-xl font-medium mb-2">E-commerce Platform</h5>
+                    <h5 className={`text-xl font-medium mb-2 ${darkTheme ? "text-gray-100" : "text-gray-800"}`}>
+                      E-commerce Platform
+                    </h5>
                     <div className="flex flex-wrap gap-2 mb-3">
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                        darkTheme ? "bg-gray-800 text-blue-300 border border-blue-900/40" : "bg-blue-50 text-blue-700 border border-blue-100"
                       }`}>React</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                        darkTheme ? "bg-gray-800 text-blue-300 border border-blue-900/40" : "bg-blue-50 text-blue-700 border border-blue-100"
                       }`}>Node.js</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                        darkTheme ? "bg-gray-800 text-blue-300 border border-blue-900/40" : "bg-blue-50 text-blue-700 border border-blue-100"
                       }`}>MongoDB</span>
                     </div>
-                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                    <p className={darkTheme ? "text-gray-400 mb-4" : "text-gray-600 mb-4"}>
                       A full-featured e-commerce solution with product management, cart functionality, and secure payment processing.
                     </p>
                     <div className="flex gap-3 mt-2">
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-sky-900/30 text-sky-300 hover:bg-sky-800/50" 
-                          : "bg-sky-100 text-sky-700 hover:bg-sky-200"
+                          ? "bg-blue-900/30 text-blue-300 border border-blue-800/30 hover:bg-blue-900/50" 
+                          : "bg-blue-50 text-blue-700 border border-blue-100 hover:bg-blue-100"
                       }`}>Live Demo</a>
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-white/10 hover:bg-white/20" 
-                          : "bg-black/10 hover:bg-black/20"
+                          ? "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700" 
+                          : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
                       }`}>Source Code</a>
                     </div>
                   </div>
                   
-                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                  <div className={`p-6 rounded-lg transition-all ${
                     darkTheme 
-                      ? "bg-white/5 border border-white/10 hover:border-sky-400/30" 
-                      : "bg-black/5 border border-black/5 hover:border-sky-500/20"
+                      ? "bg-gray-900 border border-gray-800 hover:border-blue-900" 
+                      : "bg-white border border-gray-200 hover:border-blue-200 shadow-sm"
                   }`}>
-                    <h5 className="text-xl font-medium mb-2">Analytics Dashboard</h5>
+                    <h5 className={`text-xl font-medium mb-2 ${darkTheme ? "text-gray-100" : "text-gray-800"}`}>
+                      Analytics Dashboard
+                    </h5>
                     <div className="flex flex-wrap gap-2 mb-3">
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                        darkTheme ? "bg-gray-800 text-blue-300 border border-blue-900/40" : "bg-blue-50 text-blue-700 border border-blue-100"
                       }`}>Vue.js</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                        darkTheme ? "bg-gray-800 text-blue-300 border border-blue-900/40" : "bg-blue-50 text-blue-700 border border-blue-100"
                       }`}>D3.js</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-sky-900/50 text-sky-300" : "bg-sky-100 text-sky-700"
+                        darkTheme ? "bg-gray-800 text-blue-300 border border-blue-900/40" : "bg-blue-50 text-blue-700 border border-blue-100"
                       }`}>Firebase</span>
                     </div>
-                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                    <p className={darkTheme ? "text-gray-400 mb-4" : "text-gray-600 mb-4"}>
                       Real-time analytics dashboard with interactive charts, filters, and customizable reporting features.
                     </p>
                     <div className="flex gap-3 mt-2">
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-sky-900/30 text-sky-300 hover:bg-sky-800/50" 
-                          : "bg-sky-100 text-sky-700 hover:bg-sky-200"
+                          ? "bg-blue-900/30 text-blue-300 border border-blue-800/30 hover:bg-blue-900/50" 
+                          : "bg-blue-50 text-blue-700 border border-blue-100 hover:bg-blue-100"
                       }`}>Live Demo</a>
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-white/10 hover:bg-white/20" 
-                          : "bg-black/10 hover:bg-black/20"
+                          ? "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700" 
+                          : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
                       }`}>Source Code</a>
                     </div>
                   </div>
@@ -224,45 +228,47 @@ const App: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <div className={`h-6 w-1 rounded-full mr-3 ${
                     darkTheme 
-                      ? "bg-gradient-to-b from-violet-400/80 to-violet-600/70" 
-                      : "bg-gradient-to-b from-violet-500/90 to-violet-700/80"
+                      ? "bg-gradient-to-b from-slate-500/60 to-slate-700/60" 
+                      : "bg-gradient-to-b from-slate-600 to-slate-800"
                   }`}></div>
-                  <h4 className={`text-xl font-medium ${darkTheme ? "text-violet-300" : "text-violet-700"}`}>
+                  <h4 className={`text-xl font-medium ${darkTheme ? "text-slate-300" : "text-slate-700"}`}>
                     Mobile Apps
                   </h4>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                  <div className={`p-6 rounded-lg transition-all ${
                     darkTheme 
-                      ? "bg-white/5 border border-white/10 hover:border-violet-400/30" 
-                      : "bg-black/5 border border-black/5 hover:border-violet-500/20"
+                      ? "bg-gray-900 border border-gray-800 hover:border-slate-800" 
+                      : "bg-white border border-gray-200 hover:border-slate-200 shadow-sm"
                   }`}>
-                    <h5 className="text-xl font-medium mb-2">Fitness Tracker</h5>
+                    <h5 className={`text-xl font-medium mb-2 ${darkTheme ? "text-gray-100" : "text-gray-800"}`}>
+                      Fitness Tracker
+                    </h5>
                     <div className="flex flex-wrap gap-2 mb-3">
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-violet-900/50 text-violet-300" : "bg-violet-100 text-violet-700"
+                        darkTheme ? "bg-gray-800 text-slate-300 border border-slate-800/40" : "bg-slate-50 text-slate-700 border border-slate-100"
                       }`}>React Native</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-violet-900/50 text-violet-300" : "bg-violet-100 text-violet-700"
+                        darkTheme ? "bg-gray-800 text-slate-300 border border-slate-800/40" : "bg-slate-50 text-slate-700 border border-slate-100"
                       }`}>Redux</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-violet-900/50 text-violet-300" : "bg-violet-100 text-violet-700"
+                        darkTheme ? "bg-gray-800 text-slate-300 border border-slate-800/40" : "bg-slate-50 text-slate-700 border border-slate-100"
                       }`}>Health API</span>
                     </div>
-                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                    <p className={darkTheme ? "text-gray-400 mb-4" : "text-gray-600 mb-4"}>
                       Mobile app for tracking workouts, nutrition, and wellness metrics with social sharing capabilities.
                     </p>
                     <div className="flex gap-3 mt-2">
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-violet-900/30 text-violet-300 hover:bg-violet-800/50" 
-                          : "bg-violet-100 text-violet-700 hover:bg-violet-200"
+                          ? "bg-slate-900/40 text-slate-300 border border-slate-800/30 hover:bg-slate-900/60" 
+                          : "bg-slate-50 text-slate-700 border border-slate-100 hover:bg-slate-100"
                       }`}>Case Study</a>
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-white/10 hover:bg-white/20" 
-                          : "bg-black/10 hover:bg-black/20"
+                          ? "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700" 
+                          : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
                       }`}>App Store</a>
                     </div>
                   </div>
@@ -274,79 +280,83 @@ const App: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <div className={`h-6 w-1 rounded-full mr-3 ${
                     darkTheme 
-                      ? "bg-gradient-to-b from-amber-400/80 to-amber-600/70" 
-                      : "bg-gradient-to-b from-amber-500/90 to-amber-700/80"
+                      ? "bg-gradient-to-b from-gray-500/60 to-gray-700/60" 
+                      : "bg-gradient-to-b from-gray-600 to-gray-800"
                   }`}></div>
-                  <h4 className={`text-xl font-medium ${darkTheme ? "text-amber-300" : "text-amber-700"}`}>
+                  <h4 className={`text-xl font-medium ${darkTheme ? "text-gray-300" : "text-gray-700"}`}>
                     UI/UX Projects
                   </h4>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                  <div className={`p-6 rounded-lg transition-all ${
                     darkTheme 
-                      ? "bg-white/5 border border-white/10 hover:border-amber-400/30" 
-                      : "bg-black/5 border border-black/5 hover:border-amber-500/20"
+                      ? "bg-gray-900 border border-gray-800 hover:border-gray-700" 
+                      : "bg-white border border-gray-200 hover:border-gray-300 shadow-sm"
                   }`}>
-                    <h5 className="text-xl font-medium mb-2">Banking App Redesign</h5>
+                    <h5 className={`text-xl font-medium mb-2 ${darkTheme ? "text-gray-100" : "text-gray-800"}`}>
+                      Banking App Redesign
+                    </h5>
                     <div className="flex flex-wrap gap-2 mb-3">
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                        darkTheme ? "bg-gray-800 text-gray-300 border border-gray-700/40" : "bg-gray-100 text-gray-700 border border-gray-200"
                       }`}>Figma</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                        darkTheme ? "bg-gray-800 text-gray-300 border border-gray-700/40" : "bg-gray-100 text-gray-700 border border-gray-200"
                       }`}>Prototyping</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                        darkTheme ? "bg-gray-800 text-gray-300 border border-gray-700/40" : "bg-gray-100 text-gray-700 border border-gray-200"
                       }`}>User Research</span>
                     </div>
-                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                    <p className={darkTheme ? "text-gray-400 mb-4" : "text-gray-600 mb-4"}>
                       Complete redesign of a banking application with focus on accessibility and streamlined user journeys.
                     </p>
                     <div className="flex gap-3 mt-2">
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-amber-900/30 text-amber-300 hover:bg-amber-800/50" 
-                          : "bg-amber-100 text-amber-700 hover:bg-amber-200"
+                          ? "bg-gray-800/80 text-gray-300 border border-gray-700/30 hover:bg-gray-800" 
+                          : "bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200"
                       }`}>View Design</a>
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-white/10 hover:bg-white/20" 
-                          : "bg-black/10 hover:bg-black/20"
+                          ? "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700" 
+                          : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
                       }`}>Case Study</a>
                     </div>
                   </div>
                   
-                  <div className={`backdrop-blur-sm p-6 rounded-lg transition-all ${
+                  <div className={`p-6 rounded-lg transition-all ${
                     darkTheme 
-                      ? "bg-white/5 border border-white/10 hover:border-amber-400/30" 
-                      : "bg-black/5 border border-black/5 hover:border-amber-500/20"
+                      ? "bg-gray-900 border border-gray-800 hover:border-gray-700" 
+                      : "bg-white border border-gray-200 hover:border-gray-300 shadow-sm"
                   }`}>
-                    <h5 className="text-xl font-medium mb-2">Design System</h5>
+                    <h5 className={`text-xl font-medium mb-2 ${darkTheme ? "text-gray-100" : "text-gray-800"}`}>
+                      Design System
+                    </h5>
                     <div className="flex flex-wrap gap-2 mb-3">
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                        darkTheme ? "bg-gray-800 text-gray-300 border border-gray-700/40" : "bg-gray-100 text-gray-700 border border-gray-200"
                       }`}>Storybook</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                        darkTheme ? "bg-gray-800 text-gray-300 border border-gray-700/40" : "bg-gray-100 text-gray-700 border border-gray-200"
                       }`}>Styled Components</span>
                       <span className={`text-xs px-2 py-1 rounded ${
-                        darkTheme ? "bg-amber-900/50 text-amber-300" : "bg-amber-100 text-amber-700"
+                        darkTheme ? "bg-gray-800 text-gray-300 border border-gray-700/40" : "bg-gray-100 text-gray-700 border border-gray-200"
                       }`}>Documentation</span>
                     </div>
-                    <p className={darkTheme ? "opacity-80 mb-4" : "opacity-70 mb-4"}>
+                    <p className={darkTheme ? "text-gray-400 mb-4" : "text-gray-600 mb-4"}>
                       Comprehensive design system with component library, usage guidelines, and accessibility documentation.
                     </p>
                     <div className="flex gap-3 mt-2">
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-amber-900/30 text-amber-300 hover:bg-amber-800/50" 
-                          : "bg-amber-100 text-amber-700 hover:bg-amber-200"
+                          ? "bg-gray-800/80 text-gray-300 border border-gray-700/30 hover:bg-gray-800" 
+                          : "bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200"
                       }`}>View System</a>
-                      <a href="#" className={`text-sm px-3 py-1 rounded-md ${
+                      <a href="#" className={`text-sm px-3 py-1 rounded ${
                         darkTheme 
-                          ? "bg-white/10 hover:bg-white/20" 
-                          : "bg-black/10 hover:bg-black/20"
+                          ? "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700" 
+                          : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
                       }`}>Documentation</a>
                     </div>
                   </div>
