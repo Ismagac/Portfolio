@@ -29,58 +29,60 @@ const App: React.FC = () => {
             ? "min-h-screen text-white flex flex-col items-center"
             : "min-h-screen text-black flex flex-col items-center"
         }>
-          <div className="relative flex flex-col md:flex-row w-full max-w-6xl gap-6">
-            <div className="flex-1 relative p-6">
-            <Iridescence color={darkTheme ? [0.2, 0.1, 0.2] : [1, 0.9, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />              
-              <header className="bg-opacity-20 bg-white rounded-full p-6 mb-6 max-w-3xl flex justify-between items-center">
-                <h1 className="text-lg font-bold">Isma</h1>
-                <nav className="flex gap-6">
-                  <a href="#inicio" className="hover:scale-110 hover:text-black transition-colors">Projects</a>
-                  <a href="#sobre-mi" className="hover:scale-110 hover:text-black transition-colors">About</a>
-                  <a href="#contacto" className="hover:scale-110 hover:text-black transition-colors">Contact</a>
-                </nav>
-                <button
-                  className="hover:scale-110 transition-colors"
-                  onClick={() => setDarkTheme(!darkTheme)}
-                >
-                  {darkTheme ? "Claro" : "Oscuro"}
-                </button>
-              </header>
+          <div className="w-full max-w-6xl">
+            <div className="relative flex flex-col md:flex-row w-full gap-6 mb-16">
+              <div className="flex-1 relative md:p-0">
+                <Iridescence color={darkTheme ? [0.2, 0.1, 0.2] : [1, 0.9, 1]} mouseReact={false} amplitude={0.1} speed={1.0} />              
+                <header className="bg-opacity-20 bg-white rounded-full p-6 mb-6 max-w-3xl flex justify-between items-center">
+                  <h1 className="text-lg font-bold">Isma</h1>
+                  <nav className="flex gap-6">
+                    <a href="#proyectos" className="hover:scale-110 hover:text-black transition-colors">Projects</a>
+                    <a href="#sobre-mi" className="hover:scale-110 hover:text-black transition-colors">About</a>
+                    <a href="#contacto" className="hover:scale-110 hover:text-black transition-colors">Contact</a>
+                  </nav>
+                  <button
+                    className="hover:scale-110 transition-colors"
+                    onClick={() => setDarkTheme(!darkTheme)}
+                  >
+                    {darkTheme ? "Claro" : "Oscuro"}
+                  </button>
+                </header>
 
-              <PixelCard variant='default' className="bg-gradient-to-br from-purple-700 via-pink-700 to-red-500 bg-opacity-70 absolute top-0 left-0 shadow-lg min-h-[60vh] w-full">
-              <div className="absolute top-40 left-40 min-h-[60vh] w-50">
-                <h2 className="text-4xl font-medium">Isma</h2>
-                <RotatingText
-                  texts={['React', 'Bits', 'Is', 'Cool!']}
-                  mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-                  staggerFrom="last"
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "-120%" }}
-                  staggerDuration={0.025}
-                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={2000}
-                />
+                <PixelCard variant='default' className="bg-gradient-to-br from-purple-700 via-pink-700 to-red-500 bg-opacity-70 shadow-lg min-h-[60vh] w-full rounded-xl">
+                  <div className="absolute top-40 left-40 min-h-[60vh] w-50">
+                    <h2 className="text-4xl font-medium">Isma</h2>
+                    <RotatingText
+                      texts={['React', 'Bits', 'Is', 'Cool!']}
+                      mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                      staggerFrom="last"
+                      initial={{ y: "100%" }}
+                      animate={{ y: 0 }}
+                      exit={{ y: "-120%" }}
+                      staggerDuration={0.025}
+                      splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                      transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                      rotationInterval={2000}
+                    />
+                  </div>
+                </PixelCard>
               </div>
-              </PixelCard>
+
+              <div className="w-full md:w-1/3 flex flex-col items-center justify-center gap-4">
+                <CircularStatSlider stats={stats} />
+                <CardFlip/>
+              </div>
             </div>
 
-            <div className="w-full md:w-1/3 flex flex-col items-center gap-4 mt-6">
-             <CircularStatSlider stats={stats} />
-
-              <CardFlip/>
-            </div>
+            <style>
+              {`
+                @keyframes swirl {
+                  0%   { transform: rotate(0deg); }
+                  100% { transform: rotate(360deg); }
+                }
+              `}
+            </style>
           </div>
 
-          <style>
-            {`
-              @keyframes swirl {
-                0%   { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-              }
-            `}
-          </style>
           <section id="sobre-mi" className="w-full max-w-6xl mt-20 mb-16">
             <div className={`backdrop-blur-md rounded-xl p-8 shadow-xl transition-all duration-500 transform hover:translate-y-[-5px] ${
               darkTheme 
