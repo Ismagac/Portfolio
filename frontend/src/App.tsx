@@ -91,7 +91,7 @@ const App: React.FC = () => {
 
           <section
             id="proyectos"
-            className="relative overflow-hidden mt-12 p-6 max-w-6xl hover:scale-105 transition-transform duration-500"
+            className="relative overflow-hidden mt-12 p-6 max-w-6xl hover:scale-105 transition-transform duration-500 border-2 border-green-400 rounded-lg"
           >
             <h3 className="text-2xl font-normal mb-4">Projects</h3>
             <div className="flex gap-4 items-center mb-4">
