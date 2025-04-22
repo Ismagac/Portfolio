@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import SplashScreen from "./components/SplashScreen";
 import Iridescence from "./components/Iridiscence";
-import Dock from "./components/Dock";
+//import Dock from "./components/Dock";
 import CircularStatSlider from "./components/CircularStats";
 import RotatingText from "./components/RotatinText";
-import PixelCard from "./components/PixelCard";
+//import PixelCard from "./components/PixelCard";
 import CardFlip from "./components/CardFlip";
 import "./App.css";
 
